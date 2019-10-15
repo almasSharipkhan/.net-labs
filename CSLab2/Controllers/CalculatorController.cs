@@ -42,7 +42,7 @@ namespace CSLab2.Controllers
             return View("Result");
         }
 
-        [Route("{firstNumber:int}/{secondNumber:int}")]
+        [Route("{firstNumber:int}/{secondNumber:int:min(1)}")]
         public IActionResult Divide(int firstNumber, int secondNumber)
         {
             ViewData["action"] = RouteData.Values["action"].ToString();
