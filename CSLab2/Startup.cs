@@ -1,8 +1,8 @@
-﻿using System;
+﻿using CSLab2.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CSLab2.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -17,7 +17,7 @@ namespace CSLab2
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MoviesContext>(options =>
+            services.AddDbContext<MainContext>(options =>
             {
                 options.UseSqlite("Filename=movies.db");
             });
